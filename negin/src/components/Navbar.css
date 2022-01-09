@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri&family=Montserrat:ital,wght@1,300&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Amiri", serif;
+}
+
+a {
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  position: absolute;
+  width: 100vw;
+  align-items: center;
+  min-height: 8vh;
+}
+.navlinks {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  width: 50%;
+}
+.link {
+  margin: 1.5rem;
+}
+.link a {
+  color: rgb(21, 214, 205, 0.8);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.link a:hover {
+  color: rgb(21, 214, 205, 1);
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  margin: 0.75rem;
+  font-size: 1.5rem;
+  color: rgb(21, 214, 205);
+}
+.hamburger-toggle {
+  cursor: pointer;
+  color: aqua;
+  display: none;
+}
+
+.main {
+  /* background: radial-gradient(
+      circle,
+      rgba(252, 125, 125, 0.4822303921568627) 0%,
+      rgba(244, 136, 136, 0.3085609243697479) 100%
+    ), */
+  background: url("../background.jpg");
+  height: 100vh;
+  /* background-size: center; */
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 850px) {
+  body {
+    overflow-x: hidden;
+  }
+  .hamburger-toggle {
+    display: block;
+    width: 5%;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .navlinks {
+    margin-top: 2rem;
+    position: absolute;
+    left: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 92vh;
+    align-items: center;
+    width: 50%;
+    top: 8vh;
+    background-color: rgb(107, 9, 33, 0.5);
+    font-size: 32px;
+    transform: translateX(210%);
+    transition: transform 0.5s ease-in;
+  }
+  .active {
+    transform: translateX(0%);
+  }
+}
